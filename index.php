@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     
     <title>Login</title>
     
     <link rel="stylesheet" href="css/style_login.css">
-    <script type="text/javascript" src="javascript/script_login.js"></script>
-    
+
 </head>
 
-<body class="page1">
+<body>
+<?php
+    if($_POST){
+        include("funcoesPHP/validaLogin.php");
+    }
+?>
+
   <div class="loginBox">
       <img src="img/darth.png" class="user">
       <h2>Log In Here</h2>
-      <form action="">
+      <form method="post">
           <p>User ou Email</p>
           <input type="text" name="userid" placeholder="Enter user or email">
           <p>Password</p>
-          <input type="password" name="pswrd" placeholder="*******">
-          <input type="button" onclick="check(this.form)" value="Sign In">
+          <input type="password" name="pswrd" placeholder="***">
+          <input class="button" type="submit" value="Sign In">
           <a href="#">Forget Password</a>
       </form>
-  </div>
-   
-   
-    
+  </div>  
 </body>
-
 
 </html>
